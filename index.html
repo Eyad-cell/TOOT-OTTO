@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Carter One">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press Start 2P">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pushster">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Permanent Marker">
+
+  
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>TOOT and OTTO!</title>
+</head>
+<body>
+
+<h1>TOOT and OTTO!</h1>
+
+
+  <form class="scores">
+    
+    <div class='TOOTorOTTO'>
+    <p>
+      What are you gonna be?
+    </p>
+    <input type="button"  onclick="TOOT_btn()" class='TOOT' id="TOOT" value="TOOT">
+    <input type="button"  onclick="OTTO_btn()" class='OTTO' id="OTTO" value="OTTO">
+
+   
+    </div>
+    <div class = 'TorO'>
+      <p>Choose what are you gonna play next! </p>
+      <button type="button" id="T_btn" onclick="T_Function()">T</button>
+      <button type="button" id="O_btn" onclick="O_Function()">O</button> 
+    </div>
+ 
+
+    <div class="playerOne">
+      <h4>TOOT Player: <span id="playerOneTurn">Your Turn!</span></h4>
+      <br>
+    <p>How Many T's left: <a id="P1_T_counters">6</a></p>
+    <p>How Many O's left: <a id="P1_O_counters">6</a></p>
+  
+    </div>
+  
+    <div class="playerTwo">
+      <h4>OTTO Player: <span id="playerTwoTurn">Your Turn!</span></h4>
+      <br>
+      <p>How Many T's left: <a id="P2_T_counters">6</a></p>
+      <p>How Many O's left: <a id="P2_O_counters">6</a></p>
+      
+    </div>
+  </form>
+
+  <span id = 'winAnnouncement'class="status">
+
+  </span>
+
+
+
+  <div  id = 'game-board' class="game-board">
+    <div onclick="P1_Turn();P2_Turn();" class="cell row-top col-0"></div>
+    <div onclick="P1_Turn();P2_Turn();"class="cell row-top col-1"></div>
+    <div onclick="P1_Turn();P2_Turn();"class="cell row-top col-2"></div>
+    <div onclick="P1_Turn();P2_Turn();"class="cell row-top col-3"></div>
+    <div onclick="P1_Turn();P2_Turn();"class="cell row-top col-4"></div>
+    <div onclick="P1_Turn();P2_Turn();"class="cell row-top col-5"></div>
+    <div onclick="P1_Turn();P2_Turn();"class="cell row-0 col-0 left-border top-border"></div>
+    <div onclick="P1_Turn();P2_Turn();"class="cell row-0 col-1 top-border"></div>
+    <div onclick="P1_Turn();P2_Turn();"class="cell row-0 col-2 top-border"></div>
+    <div onclick="P1_Turn();P2_Turn();"class="cell row-0 col-3 top-border"></div>
+    <div onclick="P1_Turn();P2_Turn();"class="cell row-0 col-4 top-border"></div>
+    <div onclick="P1_Turn();P2_Turn();"class="cell row-0 col-5 top-border right-border"></div>
+    <div onclick="P1_Turn();P2_Turn();"class="cell row-1 col-0 left-border"></div>
+    <div onclick="P1_Turn();P2_Turn();"class="cell row-1 col-1"></div>
+    <div onclick="P1_Turn();P2_Turn();"class="cell row-1 col-2"></div>
+    <div onclick="P1_Turn();P2_Turn();"class="cell row-1 col-3"></div>
+    <div onclick="P1_Turn();P2_Turn();"class="cell row-1 col-4"></div>
+    <div onclick="P1_Turn();P2_Turn();"class="cell row-1 col-5 right-border"></div>
+    <div onclick="P1_Turn();P2_Turn();"class="cell row-2 col-0 left-border"></div>
+    <div onclick="P1_Turn();P2_Turn();"class="cell row-2 col-1"></div>
+    <div onclick="P1_Turn();P2_Turn();"class="cell row-2 col-2"></div>
+    <div onclick="P1_Turn();P2_Turn();"class="cell row-2 col-3"></div>
+    <div onclick="P1_Turn();P2_Turn();"class="cell row-2 col-4"></div>
+    <div onclick="P1_Turn();P2_Turn();"class="cell row-2 col-5 right-border"></div>
+    <div onclick="P1_Turn();P2_Turn();"class="cell row-3 col-0 bottom-border left-border"></div>
+    <div onclick="P1_Turn();P2_Turn();"class="cell row-3 col-1 bottom-border"></div>
+    <div onclick="P1_Turn();P2_Turn();"class="cell row-3 col-2 bottom-border"></div>
+    <div onclick="P1_Turn();P2_Turn();"class="cell row-3 col-3 bottom-border"></div>
+    <div onclick="P1_Turn();P2_Turn();"class="cell row-3 col-4 bottom-border"></div>
+    <div onclick="P1_Turn();P2_Turn();"class="cell row-3 col-5 bottom-border right-border"></div>
+  </div>
+
+  <div class="footer">
+    <button class="reset"onclick="P1_onClick_T(); P1_onClick_O();P2_onClick_T();P2_onClick_O()">Reset</button>
+
+    <span class="status"></span>
+  </div>
+
+
+
+<script src="app.js"></script>
+</body>
+</html>
